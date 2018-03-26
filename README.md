@@ -11,3 +11,9 @@
 В качестве реляционной базы используется Postgresql.
 
 Для работы с иерархическими данными используется django-mptt, которая реализует алгоритм modified pre-order traversal tree.
+
+# uwsgi
+
+Для корректной работы сокетов нужно сделать uwsgi с поддержкой ssl
+
+CFLAGS="-I/usr/local/opt/openssl/include" LDFLAGS="-L/usr/local/opt/openssl/lib" UWSGI_PROFILE_OVERRIDE=ssl=true sudo pip install uwsgi -Iv
