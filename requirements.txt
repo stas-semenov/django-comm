@@ -1,0 +1,10 @@
+django
+psycopg2
+uwsgi
+django-websocket-redis
+django-redis-sessions
+django-mptt
+celery
+unicodecsv
+dicttoxml
+pathlib
