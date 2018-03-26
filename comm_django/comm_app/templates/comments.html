@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Comments{% endblock %}
+
+{% block content %}
+<p>Comments</p>
+{% load mptt_tags %}
+<div>
+    <table cellpadding="5" cellspacing="0">
+        <tbody>
+            {% for c in comments %}
+            <tr>
+                <td>{{ c.level }}</td>
+                <td>{{ c.text }}</td>
+                <td><small>uid = {{ c.user_id }}</small></td>
+                <td><small>id = {{ c.id }}</small></td>
+                <td><small><a href="{% url 'show_comments_children' c.id %}">children</a></small></td>
+                <td><small><a href="{% url 'show_comments_descendants' c.id %}">descendants</a></small></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

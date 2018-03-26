@@ -1,0 +1,6 @@
+CREATE DATABASE commdb;
+CREATE USER commdbuser WITH PASSWORD 'comm2018';
+ALTER ROLE commdbuser SET client_encoding TO 'utf8';
+ALTER ROLE commdbuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE commdbuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE commdb TO commdbuser;

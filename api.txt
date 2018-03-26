@@ -1,0 +1,7 @@
+curl -H "Content-Type: application/json" -X POST -d '{"user_id":2, "entity_id":24, "entity_type_id":1, "text":"Infinity!"}' http://192.168.1.50/comments/add/
+curl -H "Content-Type: application/json" -X POST -d '{"user_id":1, "entity_id":1, "entity_type_id":2, "text":"New day!"}' http://192.168.1.50/comments/add/
+curl -H "Content-Type: application/json" -X POST -d '{"user_id":1, "entity_id":1, "entity_type_id":2, "text":"Good night!"}' http://192.168.1.50/comments/add/
+curl -H "Content-Type: application/json" -X POST -d '{}' http://192.168.1.50/comments/entity/1
+curl -H "Content-Type: application/json" -X POST -d '{}' http://192.168.1.50/comments/user/1
+curl -H "Content-Type: application/json" -X POST -d '{}' http://192.168.1.50/comments/descendants/12
+curl -H "Content-Type: application/json" -X POST -d '{}' http://192.168.1.50/comments/children/21
